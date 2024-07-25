@@ -134,7 +134,45 @@
         </script>
 
 
+<body>
+  <a id="downloadButton" class="button button-default" href="#" onclick="openLanguageSelection()"><img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Cloud Icon">Download Company Profile</a>
 
+  <script>
+      function openLanguageSelection() {
+          // Open a new window for language selection
+          var languageSelectionWindow = window.open("", "_blank");
+
+          // Write HTML content into the new window
+          languageSelectionWindow.document.write(`
+              <!DOCTYPE html>
+              <html lang="en">
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Select Language</title>
+              </head>
+              <body>
+                  <h2>Select Language:</h2>
+                  <button onclick="downloadProfile('AZE')">Download Azerbaijani</button>
+                  <button onclick="downloadProfile('EN')">Download English</button>
+
+                  <script>
+                      function downloadProfile(language) {
+                          if (language === 'AZE') {
+                              window.location.href = "https://github.com/Rahmannn9/summertourqr/raw/4dfdf93d4ba80cad580ddb16c56d1e81fa76edbe/files/Summer%20Tour%20Azerbaijan%20(AZE).pdf";
+                          } else if (language === 'EN') {
+                              window.location.href = "files/Summer%20Tour%20Azerbaijan%20(EN).pdf";
+                          } else {
+                              alert("Invalid choice.");
+                          }
+                      }
+                  </script>
+              </body>
+              </html>
+          `);
+      }
+  </script>
+</body>
 
 
         <!-- Amazon Music -->
