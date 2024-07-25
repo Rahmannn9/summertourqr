@@ -568,8 +568,8 @@ button:hover,
 
 /* Mailchimp */
 .button.button-mailchimp {
-  color: #7affc8;
-  background-color: #00ff6a;
+  color: #ffffff;
+  background-color: #7ffab2;
 }
 .button.button-mailchimp:hover,
 .button.button-mailchimp:focus {
