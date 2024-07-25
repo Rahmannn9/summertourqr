@@ -134,14 +134,14 @@
         </script>
 
 
-<title>Download Company Profile</title>
-</head>
-<body>
-    <button class="button button-default" onclick="openLanguageSelection()">Download Company Profile</button>
+<a id="downloadButton" class="button button-default" href="#" onclick="openLanguageSelection()"><img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Cloud Icon">Download Company Profile</a>
 
     <script>
         function openLanguageSelection() {
+            // Open a new window for language selection
             var languageSelectionWindow = window.open("", "_blank");
+
+            // Write HTML content into the new window
             languageSelectionWindow.document.write(`
                 <!DOCTYPE html>
                 <html lang="en">
@@ -152,23 +152,17 @@
                 </head>
                 <body>
                     <h2>Select Language:</h2>
-                    <select id="languageDropdown">
-                        <option value="AZE">Azerbaijani (🇦🇿)</option>
-                        <option value="EN">English (🇬🇧)</option>
-                    </select>
-                    <button class="button button-default" onclick="downloadProfile()">Download</button>
+                    <button onclick="downloadProfile('AZE')">Download Azerbaijani</button>
+                    <button onclick="downloadProfile('EN')">Download English</button>
 
                     <script>
-                        function downloadProfile() {
-                            var select = document.getElementById("languageDropdown");
-                            var language = select.value;
-
+                        function downloadProfile(language) {
                             if (language === 'AZE') {
                                 window.location.href = "https://github.com/Rahmannn9/summertourqr/raw/4dfdf93d4ba80cad580ddb16c56d1e81fa76edbe/files/Summer%20Tour%20Azerbaijan%20(AZE).pdf";
                             } else if (language === 'EN') {
                                 window.location.href = "files/Summer%20Tour%20Azerbaijan%20(EN).pdf";
                             } else {
-                                alert("Please select a language.");
+                                alert("Invalid choice.");
                             }
                         }
                     </script>
@@ -177,6 +171,8 @@
             `);
         }
     </script>
+
+
         <!-- Amazon Music -->
         <!-- <a class="button button-amazon-music" href="#" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/amazon-music.svg" alt="Amazon Music Logo">Listen on Amazon Music</a><br> -->
         
