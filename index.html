@@ -113,6 +113,25 @@
         <!-- Generic Cloud -->
         <a class="button button-default" href="files/Summer Tour Azerbaijan (EN).pdf" target="_blank" download="Summer Tour Azerbaijan (EN).pdf"><img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Cloud Icon">Company Profile 🇬🇧</a><br>
         
+
+
+        <a id="downloadButton" class="button button-default" href="#" onclick="selectLanguage()"><img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Cloud Icon">Download Company Profile</a>
+
+        <script>
+            function selectLanguage() {
+                // Ask the user which language version to download
+                var language = prompt("Enter 'AZ' for Azerbaijani or 'EN' for English:");
+    
+                // Construct the download link based on the user's choice
+                if (language === 'AZ') {
+                    window.location.href = "https://github.com/Rahmannn9/summertourqr/raw/4dfdf93d4ba80cad580ddb16c56d1e81fa76edbe/files/Summer%20Tour%20Azerbaijan%20(AZE).pdf";
+                } else if (language === 'EN') {
+                    window.location.href = "files/Summer%20Tour%20Azerbaijan%20(EN).pdf";
+                } else {
+                    alert("Invalid choice. Please enter 'AZ' or 'EN'.");
+                }
+            }
+        </script>
         <!-- Amazon Music -->
         <!-- <a class="button button-amazon-music" href="#" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/amazon-music.svg" alt="Amazon Music Logo">Listen on Amazon Music</a><br> -->
         
@@ -388,13 +407,6 @@
 
         <!-- Generic Blog -->
         <!-- <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-blog.svg" alt="Blog Icon">Read our blog</a><br> -->
-
-        <!-- Generic Cloud -->
-        <a class="button button-default" href="https://github.com/Rahmannn9/summertourqr/raw/4dfdf93d4ba80cad580ddb16c56d1e81fa76edbe/files/Summer%20Tour%20Azerbaijan%20(AZE).pdf" target="_blank" download="Summer Tour Azerbaijan (AZE).pdf"><img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Cloud Icon">Company Profile 🇦🇿</a><br>
-
-        <!-- Generic Cloud -->
-        <a class="button button-default" href="files/Summer Tour Azerbaijan (EN).pdf" target="_blank" download="Summer Tour Azerbaijan (EN).pdf"><img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Cloud Icon">Company Profile 🇬🇧</a><br>
-
         <!-- Generic Code -->
         <!-- <a class="button button-default" href="#" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-code.svg" alt="Code Icon">View the code</a><br> -->
 
