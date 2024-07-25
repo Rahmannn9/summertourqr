@@ -132,6 +132,29 @@
                 }
             }
         </script>
+
+
+<label for="languageSelect">Select Language:</label>
+    <select id="languageSelect">
+        <option value="AZE">Azerbaijani (🇦🇿)</option>
+        <option value="EN">English (🇬🇧)</option>
+    </select>
+    <button class="button button-default" onclick="downloadProfile()">Download Company Profile</button>
+
+    <script>
+        function downloadProfile() {
+            var select = document.getElementById("languageSelect");
+            var language = select.value;
+
+            if (language === 'AZE') {
+                window.location.href = "https://github.com/Rahmannn9/summertourqr/raw/4dfdf93d4ba80cad580ddb16c56d1e81fa76edbe/files/Summer%20Tour%20Azerbaijan%20(AZE).pdf";
+            } else if (language === 'EN') {
+                window.location.href = "files/Summer%20Tour%20Azerbaijan%20(EN).pdf";
+            } else {
+                alert("Please select a language.");
+            }
+        }
+    </script>
         <!-- Amazon Music -->
         <!-- <a class="button button-amazon-music" href="#" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/amazon-music.svg" alt="Amazon Music Logo">Listen on Amazon Music</a><br> -->
         
