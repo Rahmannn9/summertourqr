@@ -134,57 +134,7 @@
         </script>
 
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Company Profile</title>
-  <style>
-      .button {
-          display: inline-block;
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: #fff;
-          text-decoration: none;
-          border-radius: 4px;
-          transition: background-color 0.3s;
-      }
-      .button:hover {
-          background-color: #0056b3;
-      }
-      .icon {
-          vertical-align: middle;
-          margin-right: 5px;
-      }
-  </style>
-  <script>
-      function selectLanguage() {
-          var language = document.querySelector('input[name="language"]:checked');
 
-          if (language) {
-              if (language.value === 'AZ') {
-                  window.location.href = "https://github.com/Rahmannn9/summertourqr/raw/4dfdf93d4ba80cad580ddb16c56d1e81fa76edbe/files/Summer%20Tour%20Azerbaijan%20(AZE).pdf";
-              } else if (language.value === 'EN') {
-                  window.location.href = "files/Summer%20Tour%20Azerbaijan%20(EN).pdf";
-              }
-          } else {
-              alert("Please select a language.");
-          }
-      }
-  </script>
-</head>
-<body>
-  <label>
-      <input type="radio" name="language" value="AZ"> Azerbaijani (AZ)
-  </label>
-  <br>
-  <label>
-      <input type="radio" name="language" value="EN"> English (EN)
-  </label>
-  <br><br>
-  <a id="downloadButton" class="button button-default" href="#" onclick="selectLanguage()">
-      <img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Cloud Icon">Download Company Profile
-  </a>
-</body>
 
         <!-- Amazon Music -->
         <!-- <a class="button button-amazon-music" href="#" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/amazon-music.svg" alt="Amazon Music Logo">Listen on Amazon Music</a><br> -->
