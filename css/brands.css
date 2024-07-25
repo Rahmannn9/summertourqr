@@ -566,13 +566,13 @@ button:hover,
   filter: brightness(90%);
 }
 
-/* WeChat */
-.button.button-wechat {
-  color: #c50808;
-  background-color: #00ff62;
+/* Mailchimp */
+.button.button-mailchimp {
+  color: #000000;
+  background-color: #FFE01B;
 }
-.button.button-wechat:hover,
-.button.button-wechat:focus {
+.button.button-mailchimp:hover,
+.button.button-mailchimp:focus {
   filter: brightness(90%);
 }
 
