@@ -1,18 +1,4 @@
-Linklər olan düymələrin hamısının eyni enlikdə olmasını təmin etmək üçün CSS-ə müəyyən bir enlik dəyəri təyin etmək lazımdır. Bunun üçün CSS-də `width` xüsusiyyətindən istifadə edə bilərsiniz. Məsələn, hər bir düymənin genişliyini 250px təyin edə bilərsiniz.
 
-Aşağıdakı kodu mövcud CSS hissəsinə əlavə edə bilərsiniz:
-
-```css
-.button {
-  width: 250px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-```
-
-Bunu etdikdən sonra bütün düymələr eyni enlikdə olacaq və sətir dəyişiklikləri bir-birinə uyğun olacaq. Aşağıda tam olaraq necə tətbiq edə biləcəyinizi göstərən nümunə təqdim edirəm:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,10 +19,14 @@ Bunu etdikdən sonra bütün düymələr eyni enlikdə olacaq və sətir dəyiş
     body {
       font-family: Arial, sans-serif;
     }
+
     .container {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-top: 10%;
     }
+
     .button {
       display: flex;
       justify-content: center;
@@ -44,17 +34,20 @@ Bunu etdikdən sonra bütün düymələr eyni enlikdə olacaq və sətir dəyiş
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
-      margin-bottom: 15px;
       font-size: 18px;
-      width: 250px; /* All buttons will have the same width */
+      margin: 10px 0; /* Üst- və alt tərəfdən boşluq */
+      width: fit-content;
     }
+
     .button img.icon {
       margin-right: 10px;
     }
+
     .qr-code {
       display: none;
       margin-top: 20px;
     }
+
     .qr-code img {
       width: 300px;
       height: auto;
@@ -134,7 +127,5 @@ Bunu etdikdən sonra bütün düymələr eyni enlikdə olacaq və sətir dəyiş
     });
   </script>
 </body>
-</html>
-```
 
-Bu dəyişikliklərdən sonra bütün linklər olan düymələr eyni enlikdə olacaq və bir-birinə uyğun şəkildə düzüləcəklər. Hər hansı bir başqa sualınız varsa, mən buradayam!
+</html>
