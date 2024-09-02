@@ -32,15 +32,12 @@
     }
 
     .button {
-      /* display: inline-block; */
       width: 250px; /* All buttons will have the same width */
-      /* height: 25px; Adjusted height */
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
       margin-bottom: 15px;
       font-size: 18px;
-      /* line-height: 40px; Center text vertically */
       vertical-align: middle;
     }
 
@@ -71,7 +68,7 @@
     }
 
     .button-copy {
-      /* display: inline-block; */
+      display: inline-block;
       background-color: #4CAF50; /* Green background */
       color: white; /* White text */
       border: none;
@@ -126,7 +123,7 @@
   <!-- Page Content -->
   <div class="container">
     <img class="header-img" src="images/Group.svg" srcset="images/Group.svg 2x" alt="">
-    
+
     <!-- Downloads -->
     <a class="button button-default" href="../files/Azerbaijan Chinese.pdf" target="_blank" download="Azerbaijan Chinese.pdf">
       <img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Download Icon">
@@ -147,14 +144,13 @@
 
     <!-- WeChat QR Code -->
     <a class="button button-default" id="wechatButton" role="button">
-      <img class="
-      icon" aria-hidden="true" src="images/icons/wechatt.svg" alt="WeChat Logo">
+      <img class="icon" aria-hidden="true" src="images/icons/wechatt.svg" alt="WeChat Logo">
       WeChat
     </a>
     <div class="qr-code" id="qrCode">
       <img src="../files/IMG_1213[1].JPG" alt="WeChat QR Code">
       <div class="wechat-id">
-        <strong>WeChat ID: <span id="wechatIdText">wxid_h37g2m9rpq5d12</span>
+        <strong>WeChat ID: <span id="wechatIdText">wxid_h37g2m9rpq5d12</span></strong>
         <button id="copyWechatId" class="button button-copy">Copy</button>
       </div>
     </div>
