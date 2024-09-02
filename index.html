@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,26 +20,26 @@
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      text-align: center;
       margin-top: 10%;
     }
 
     .button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: inline-block;
+      width: 250px; /* Bütün düymələr eyni enlikdə olacaq */
+      height: 60px; /* Bütün düymələrin eyni uzunluqda olması */
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
+      margin-bottom: 15px;
       font-size: 18px;
-      margin: 10px 0; /* Üst- və alt tərəfdən boşluq */
-      width: fit-content;
+      line-height: 40px; /* Mətnin düymənin ortasında yerləşməsi üçün */
+      vertical-align: middle;
     }
 
     .button img.icon {
       margin-right: 10px;
+      vertical-align: middle; /* İkonanın düymə mətni ilə ortada yerləşməsi üçün */
     }
 
     .qr-code {
@@ -121,7 +120,7 @@
 
   <!-- JavaScript for WeChat Button -->
   <script>
-    document.getElementById('wechatButton').addEventListener('click', function() {
+    document.getElementById('wechatButton').addEventListener('click', function () {
       var qrCode = document.getElementById('qrCode');
       qrCode.style.display = qrCode.style.display === 'block' ? 'none' : 'block';
     });
