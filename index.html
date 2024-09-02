@@ -22,24 +22,27 @@
     .container {
       text-align: center;
       margin-top: 10%;
+      display: flex;
+      flex-direction: column; /* Arrange children in a column */
+      align-items: center; /* Center align children horizontally */
     }
 
     .button {
       display: inline-block;
-      width: 250px; /* Bütün düymələr eyni enlikdə olacaq */
-      height: 60px; /* Bütün düymələrin eyni uzunluqda olması */
+      width: 250px; /* All buttons will have the same width */
+      height: 60px; /* All buttons will have the same height */
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
       margin-bottom: 15px;
       font-size: 18px;
-      line-height: 40px; /* Mətnin düymənin ortasında yerləşməsi üçün */
+      line-height: 40px; /* Center text vertically */
       vertical-align: middle;
     }
 
     .button img.icon {
       margin-right: 10px;
-      vertical-align: middle; /* İkonanın düymə mətni ilə ortada yerləşməsi üçün */
+      vertical-align: middle; /* Align icon vertically with text */
     }
 
     .qr-code {
@@ -58,8 +61,7 @@
   <!-- Page Content -->
   <div class="container">
     <img src="images/Group.svg" srcset="images/Group.svg 2x" alt="">
-    <h1 role="heading">Welcome to SummerTour</h1>
-    <p>Explore our resources and get in touch with us!</p>
+
 
     <!-- Downloads -->
     <a class="button button-default" href="../files/Azerbaijan Chinese.pdf" target="_blank" download="Azerbaijan Chinese.pdf">
