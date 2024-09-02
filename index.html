@@ -1,3 +1,22 @@
+Linklərin bir-birinə yapışmasının qarşısını almaq üçün hər bir link arasında boşluq (məsələn, `margin`) əlavə etməlisiniz. Aşağıdakı tərzdə `button` sinifinə `margin-bottom` tərzini artırdım:
+
+```css
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 10px auto; /* Aralarındaki boşluğu artırmaq üçün margin */
+  width: fit-content; /* Kontentə görə genişliyi */
+}
+```
+
+Aşağıda yenilənmiş HTML kodunu görə bilərsiniz:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,9 +48,8 @@
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
-      margin-bottom: 15px;
       font-size: 18px;
-      margin: 0 auto; /* Mərkəzləşdirmək üçün */
+      margin: 10px auto; /* Aralarındaki boşluğu artırmaq üçün margin */
       width: fit-content; /* Kontentə görə genişliyi */
     }
     .button img.icon {
@@ -121,3 +139,6 @@
   </script>
 </body>
 </html>
+```
+
+Bu koddan sonra düymələrin (linklərin) bir-birindən aralı olduğuna əmin ola bilərsiniz.
