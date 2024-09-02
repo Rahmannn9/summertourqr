@@ -27,16 +27,20 @@
       align-items: center; /* Center align children horizontally */
     }
 
+    .container img.header-img {
+      margin-bottom: 20px; /* Space between image and buttons */
+    }
+
     .button {
       display: inline-block;
       width: 250px; /* All buttons will have the same width */
-      height: 25px; /* All buttons will have the same height */
+      height: 60px; /* Adjusted height */
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
       margin-bottom: 15px;
       font-size: 18px;
-      /* line-height: 40px; Center text vertically */
+      line-height: 40px; /* Center text vertically */
       vertical-align: middle;
     }
 
@@ -60,10 +64,8 @@
 <body>
   <!-- Page Content -->
   <div class="container">
-    <img src="images/Group.svg" srcset="images/Group.svg 2x" alt="">
-  
-
-
+    <img class="header-img" src="images/Group.svg" srcset="images/Group.svg 2x" alt="">
+    
     <!-- Downloads -->
     <a class="button button-default" href="../files/Azerbaijan Chinese.pdf" target="_blank" download="Azerbaijan Chinese.pdf">
       <img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Download Icon">
