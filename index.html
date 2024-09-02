@@ -125,8 +125,82 @@
         <!-- Generic Cloud -->
         <a class="button button-default" href="files/Summer Tour Azerbaijan (EN).pdf" target="_blank" download="Summer Tour Azerbaijan (EN).pdf"><img class="icon" aria-hidden="true" src="images/icons/download.svg" alt="Cloud Icon">Company Profile EN</a><br>
         <!-- Mailchimp -->
-        <a class="button button-mailchimp" href="https://u.wechat.com/kKlqffnjYXvLtzJVAAQnfMchttps://u.wechat.com/kKlqffnjYXvLtzJVAAQnfMc" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/wechatt.svg" alt="Mailchimp Logo">WeChat</a><br>
-                  <!-- Generic Email -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>WeChat QR Code</title>
+            <style>
+                /* Basic styles */
+                body {
+                    font-family: Arial, sans-serif;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    flex-direction: column;
+                }
+        
+                .button {
+                    background-color: #1DA1F2;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                }
+        
+                .button img.icon {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 10px;
+                }
+        
+                .qr-code {
+                    display: none;
+                    margin-top: 20px;
+                }
+        
+                .qr-code img {
+                    width: 300px; /* You can adjust the size */
+                    height: auto;
+                }
+            </style>
+        </head>
+        <body>
+        
+            <!-- WeChat Button -->
+            <a class="button" id="wechatButton" role="button">
+                <img class="icon" aria-hidden="true" src="images/icons/wechatt.svg" alt="WeChat Logo">
+                WeChat
+            </a>
+        
+            <!-- QR Code Image -->
+            <div class="qr-code" id="qrCode">
+                <img src="path_to_your_uploaded_image.jpg" alt="WeChat QR Code">
+            </div>
+        
+            <script>
+                // JavaScript to handle the button click
+                document.getElementById('wechatButton').addEventListener('click', function() {
+                    var qrCode = document.getElementById('qrCode');
+                    if (qrCode.style.display === 'none' || qrCode.style.display === '') {
+                        qrCode.style.display = 'block';
+                    } else {
+                        qrCode.style.display = 'none';
+                    }
+                });
+            </script>
+        
+        </body>
+        </html>
+        
         <a class="button button-default" href="mailto:summertouraze@summertour.com" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Email Us</a><br>
         <!-- WhatsApp -->
         <a class="button button-whatsapp" href="https://wa.me/994704374080" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/whatsapp.svg" alt="WhatsApp Logo">WhatsApp</a><br>
