@@ -52,11 +52,36 @@
     .qr-code {
       display: none;
       margin-top: 20px;
+      text-align: center;
     }
 
     .qr-code img {
       width: 300px;
       height: auto;
+    }
+
+    .wechat-id {
+      margin-top: 10px;
+    }
+
+    .wechat-id span {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .button-copy {
+      display: inline-block;
+      background-color: #4CAF50; /* Green background */
+      color: white; /* White text */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button-copy:hover {
+      background-color: #45a049; /* Darker green on hover */
     }
   </style>
 </head>
@@ -91,45 +116,11 @@
     </a>
     <div class="qr-code" id="qrCode">
       <img src="../files/IMG_1213[1].JPG" alt="WeChat QR Code">
+      <div class="wechat-id">
+        <span id="wechatIdText">WeChatID12345</span>
+        <button id="copyWechatId" class="button button-copy">Copy</button>
+      </div>
     </div>
 
     <!-- Contact Links -->
-    <a class="button button-default" href="mailto:summertouraze@summertour.com" target="_blank" rel="noopener" role="button">
-      <img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">
-      Email Us
-    </a>
-    <a class="button button-whatsapp" href="https://wa.me/994704374080" target="_blank" rel="noopener" role="button">
-      <img class="icon" aria-hidden="true" src="images/icons/whatsapp.svg" alt="WhatsApp Logo">
-      WhatsApp
-    </a>
-    <a class="button button-instagram" href="https://www.instagram.com/summertouraz" target="_blank" rel="noopener" role="button">
-      <img class="icon" aria-hidden="true" src="images/icons/instagram.svg" alt="Instagram Logo">
-      Instagram
-    </a>
-    <a class="button button-faceb" href="https://www.facebook.com/summertourbaku" target="_blank" rel="noopener" role="button">
-      <img class="icon" aria-hidden="true" src="images/icons/facebook.svg" alt="Facebook Logo">
-      Facebook
-    </a>
-    <a class="button button-linked" href="https://www.linkedin.com/company/summer-tour-azerbaijan/" target="_blank" rel="noopener" role="button">
-      <img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="LinkedIn Logo">
-      LinkedIn
-    </a>
-    <a class="button button-default" href="https://maps.app.goo.gl/1CqcAw7GbWZKnMhw6" target="_blank" rel="noopener" role="button">
-      <img class="icon" aria-hidden="true" src="images/icons/generic-map.svg" alt="Map Icon">
-      Get Directions
-    </a>
-
-    <!-- Footer -->
-    <p style="margin-top: 18px;color:#366383;">Made with <span>❤</span> in Azerbaijan</p>
-  </div>
-
-  <!-- JavaScript for WeChat Button -->
-  <script>
-    document.getElementById('wechatButton').addEventListener('click', function () {
-      var qrCode = document.getElementById('qrCode');
-      qrCode.style.display = qrCode.style.display === 'block' ? 'none' : 'block';
-    });
-  </script>
-</body>
-
-</html>
+    <a class="button button-default" href="mailto:summertouraze@summertour.com"
