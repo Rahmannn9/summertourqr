@@ -1,6 +1,13 @@
-Linklərin bir-birinə yapışmasının qarşısını almaq üçün hər bir link arasında boşluq (məsələn, `margin`) əlavə etməlisiniz. Aşağıdakı tərzdə `button` sinifinə `margin-bottom` tərzini artırdım:
+Linklərin aralarında daha düzgün boşluq yaratmaq üçün margin əlavə etməkdən başqa `flex-direction` tərzini də dəyişdirmək lazımdır. Düzgün düzülüş üçün düymələrin valideyni olan `container` sinifini tərzləndirmək və flex konteyner kimi düzəltmək üçün aşağıdakı kimi CSS kodunu dəyişdirin:
 
 ```css
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -9,12 +16,12 @@ Linklərin bir-birinə yapışmasının qarşısını almaq üçün hər bir lin
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  margin: 10px auto; /* Aralarındaki boşluğu artırmaq üçün margin */
-  width: fit-content; /* Kontentə görə genişliyi */
+  margin: 10px 0; /* Üst- və alt tərəfdən boşluq əlavə etmək üçün margin */
+  width: fit-content; /* Kontentə görə genişlik */
 }
 ```
 
-Aşağıda yenilənmiş HTML kodunu görə bilərsiniz:
+Aşağıda yenilənmiş HTML kodu təqdim olunur:
 
 ```html
 <!DOCTYPE html>
@@ -37,10 +44,14 @@ Aşağıda yenilənmiş HTML kodunu görə bilərsiniz:
     body {
       font-family: Arial, sans-serif;
     }
+
     .container {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-top: 10%;
     }
+
     .button {
       display: flex;
       justify-content: center;
@@ -49,16 +60,19 @@ Aşağıda yenilənmiş HTML kodunu görə bilərsiniz:
       border-radius: 5px;
       text-decoration: none;
       font-size: 18px;
-      margin: 10px auto; /* Aralarındaki boşluğu artırmaq üçün margin */
-      width: fit-content; /* Kontentə görə genişliyi */
+      margin: 10px 0; /* Üst- və alt tərəfdən boşluq */
+      width: fit-content;
     }
+
     .button img.icon {
       margin-right: 10px;
     }
+
     .qr-code {
       display: none;
       margin-top: 20px;
     }
+
     .qr-code img {
       width: 300px;
       height: auto;
@@ -138,7 +152,8 @@ Aşağıda yenilənmiş HTML kodunu görə bilərsiniz:
     });
   </script>
 </body>
+
 </html>
 ```
 
-Bu koddan sonra düymələrin (linklərin) bir-birindən aralı olduğuna əmin ola bilərsiniz.
+Bu koddan sonra linklər həm ortada olacaq, həm də aralarında kifayət qədər boşluq (mətnin aydın oxunması üçün) olacaq.
