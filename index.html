@@ -1,29 +1,4 @@
-Linklərin aralarında daha düzgün boşluq yaratmaq üçün margin əlavə etməkdən başqa `flex-direction` tərzini də dəyişdirmək lazımdır. Düzgün düzülüş üçün düymələrin valideyni olan `container` sinifini tərzləndirmək və flex konteyner kimi düzəltmək üçün aşağıdakı kimi CSS kodunu dəyişdirin:
 
-```css
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10%;
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 18px;
-  margin: 10px 0; /* Üst- və alt tərəfdən boşluq əlavə etmək üçün margin */
-  width: fit-content; /* Kontentə görə genişlik */
-}
-```
-
-Aşağıda yenilənmiş HTML kodu təqdim olunur:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -154,6 +129,3 @@ Aşağıda yenilənmiş HTML kodu təqdim olunur:
 </body>
 
 </html>
-```
-
-Bu koddan sonra linklər həm ortada olacaq, həm də aralarında kifayət qədər boşluq (mətnin aydın oxunması üçün) olacaq.
